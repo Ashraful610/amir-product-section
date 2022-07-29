@@ -6,10 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Section</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c0237d502.js" crossorigin="anonymous"></script>
 </head>
 <body>
       <main>
-        
+          <div class="product-container">
+             <div class="img-container">
+                <img src="https://cdn.shopify.com/s/files/1/2170/1117/products/img-prd-export_a1981178-64d6-486a-b432-613482ce0cac.png?v=1635500882" class="big-img" alt="">
+
+                <div class="small-img-container">
+                    <img src="https://cdn.shopify.com/s/files/1/2170/1117/products/img-prd-export_a1981178-64d6-486a-b432-613482ce0cac.png?v=1635500882"  class='active' alt="">
+                    <img src="https://cdn.shopify.com/s/files/1/2170/1117/products/img-prd-export_1_b8912167-ff05-47a0-8301-fb2ab78be7c1.png?v=1635500882" alt="">
+                    <img src="https://cdn.shopify.com/s/files/1/2170/1117/products/img-prd-export_2_3b310669-56c1-48aa-8e5a-935210f68ae7.png?v=1635500882" alt="">
+                </div>
+             </div>
+             <div class="product-details">
+                    <h2>Pink Basic Sleeve T-Shirt</h2>
+                    <h3>$20.00</h3>
+                    <h4>$5.00</h4>
+                    <div class="product-text">
+                        <h3>Free Shipping, 7 days return.</h3>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Material: 100% cotton</h5>
+                        </div>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Stretch: Mid-weight material met </h5>
+                        </div>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Wasvoorschrift: Maximaal op 30º</h5>
+                        </div>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Strijkvoorschrift: Warm strijken</h5>
+                        </div>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Lorem ipsum dolor sit.</h5>
+                        </div>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Stretch: Mid-weight material met </h5>
+                        </div>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Lorem ipsum dolor sit.</h5>
+                        </div>
+                        <div class="shipping-text">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Wasvoorschrift: Maximaal op 30º</h5>
+                        </div>
+                       
+                    </div>
+                    <hr>
+                    <div class="add-to-cart-div">
+                        <button onclick="decrement()" class="substract-button">-</button>
+                        <div id="quantity-div"></div>
+                        <button onclick="increment()" class="plus-button">+</button>
+                        <button class="add-to-cart-button">Add to cart</button>
+                    </div>
+             </div>
+          </div>
       </main>
+      <script>
+
+        var quantity = 0;
+        document.getElementById('quantity-div').innerText = quantity;
+
+        function increment() {
+            quantity = quantity + 1;
+            document.getElementById('quantity-div').innerText = quantity;
+        }      
+         function decrement() {
+                if(quantity > 0){
+                quantity = quantity - 1;
+                document.getElementById('quantity-div').innerText = quantity;
+            }
+          }
+
+      </script>
 </body>
 </html>
